@@ -19,5 +19,6 @@ Some changes to make this works!
 3. Run vue project by entering to ```frontend``` folder
 4. a. Development: ```npm run dev```
 4. b. Production: ```npm run build```
+5. Open the browser and go to project address, e.g. ```http://localhost/codeigniter3-vuejs3-vite-boilerplate/```
 
 Powered by [ngekoding.github.io](https://ngekoding.github.io)
