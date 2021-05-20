@@ -6,7 +6,7 @@ If you loves CodeIgniter 3 & Vue.js, you must try this one to make your life eas
 
 Some changes to make this works!
 
-1. application/helper/vite_helper.php
+1. application/helpers/vite_helper.php
 2. application/controllers/Vue.php
 3. application/config/routes.php
 4. application/views/index.vue.php
