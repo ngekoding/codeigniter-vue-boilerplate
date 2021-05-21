@@ -58,9 +58,4 @@ $route['translate_uri_dashes'] = FALSE;
  * All routes with 'site' prefix will used by Vue
  */
 
-$route['site/(:any)/(:any)/(:any)/(:any)'] = 'vue';
-$route['site/(:any)/(:any)/(:any)'] = 'vue';
-$route['site/(:any)/(:any)'] = 'vue';
-$route['site/(:any)'] = 'vue';
-$route['site'] = 'vue';
-$route['/'] = 'vue';
+$route['^site?(.+)'] = 'vue';
