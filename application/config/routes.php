@@ -57,5 +57,12 @@ $route['translate_uri_dashes'] = FALSE;
  * Vue Routes
  * All routes with 'site' prefix will used by Vue
  */
-
 $route['^site?(.+)'] = 'vue';
+
+/**
+ * We will use manual routes only for the API calls
+ * We also defined spesific HTTP methods
+ */
+$route['api/v1/users']['GET'] = 'api/v1/user';
+$route['api/v1/users/(:num)']['GET'] = 'api/v1/user/show/$1';
+$route['api/(.*)'] = '404';

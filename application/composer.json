@@ -1,0 +1,13 @@
+{
+    "name": "ngekoding/codeigniter3-vuejs3-vite-boilerplate",
+    "description": "CodeIgniter 3 + Vue.js 3 + Vite with supported Hot Module Replacement (HMR)",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nur Muhammad",
+            "email": "blog.nurmuhammad@gmail.com"
+        }
+    ],
+    "require": {}
+}
