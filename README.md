@@ -6,7 +6,7 @@ If you loves CodeIgniter 3 & Vue.js, you must try this one to make your life eas
 
 Some changes to make this works!
 
-1. application/helper/vite_helper.php
+1. application/helpers/vite_helper.php
 2. application/controllers/Vue.php
 3. application/config/routes.php
 4. application/views/index.vue.php
@@ -15,10 +15,11 @@ Some changes to make this works!
 # Running the project
 
 1. Setting CodeIgniter base_url at application/config/config.php
-2. Install vue project dependencies: ```npm install```
-3. Run vue project by entering to ```frontend``` folder
-4. a. Development: ```npm run dev```
-4. b. Production: ```npm run build```
-5. Open the browser and go to project address, e.g. ```http://localhost/codeigniter3-vuejs3-vite-boilerplate/```
+2. Open Terminal/CMD and enter to ```frontend``` directory
+3. Install vue project dependencies: ```npm install```
+4. Run for development: ```npm run dev```
+5. Run for production: ```npm run build```
+6. Open the browser and go to the project address, e.g. ```http://localhost/codeigniter3-vuejs3-vite-boilerplate/```
+7. Enjoy!
 
 Powered by [ngekoding.github.io](https://ngekoding.github.io)
