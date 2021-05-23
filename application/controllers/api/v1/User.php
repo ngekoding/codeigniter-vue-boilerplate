@@ -22,7 +22,7 @@ class User extends MY_Controller {
 
 	public function index()
 	{
-        $this->send_success_response($this->users);
+        return send_success_response($this->users);
 	}
 
     public function show($id)
@@ -31,12 +31,12 @@ class User extends MY_Controller {
 
         if ($found !== FALSE) {
             $user = $this->users[$found];
-            $this->send_success_response($user);
+            return send_success_response($user);
         }
 
-        $this->send_response([
+        return send_response([
             'success' => FALSE,
             'error' => 'There is no user with the given ID.'
-        ], self::HTTP_NOT_FOUND);
+        ], HTTP_NOT_FOUND);
     }
 }
