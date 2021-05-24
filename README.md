@@ -28,7 +28,7 @@ I try to keep this project as simple as possible, so you can making a changes to
 - application/config/routes.php
 - application/core/MY_Controller.php
 - application/controllers/api/*
-- Changes: [b5f80ab](https://github.com/ngekoding/codeigniter3-vuejs3-vite-boilerplate/commit/b5f80ab8261ce2e871951a5979b71eab38a903fd) [88fbda2](https://github.com/ngekoding/codeigniter3-vuejs3-vite-boilerplate/commit/88fbda2d5500056c6ae2985a42013baca609702b)
+- Changes: [b5f80ab](https://github.com/ngekoding/codeigniter3-vuejs3-vite-boilerplate/commit/b5f80ab8261ce2e871951a5979b71eab38a903fd) & [88fbda2](https://github.com/ngekoding/codeigniter3-vuejs3-vite-boilerplate/commit/88fbda2d5500056c6ae2985a42013baca609702b)
 
 ### Middlewares ✅
 - application/core/MY_Controller.php
