@@ -56,8 +56,10 @@ $route['translate_uri_dashes'] = FALSE;
 /**
  * Vue Routes
  * All routes with 'site' prefix will used by Vue
+ * Valid    : site, site/, site/a, site/a/b, site/a/b/etc...
+ * Invalid  : sitemap
  */
-$route['^site?(.+)'] = 'vue';
+$route['^site(\/(.+)?)?'] = 'vue';
 
 /**
  * We will use manual routes only for the API calls
