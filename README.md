@@ -29,7 +29,7 @@ I try to keep this project as simple as possible, so you can making a changes to
 - application/core/MY_Controller.php
 - application/controllers/api/*
 
-### Middlewares
+### Middlewares ✅
 - application/core/MY_Controller.php
 - application/middlewares/*
 - application/helpers/auth_helper.php
