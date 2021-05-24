@@ -65,4 +65,5 @@ $route['^site?(.+)'] = 'vue';
  */
 $route['api/v1/users']['GET'] = 'api/v1/user';
 $route['api/v1/users/(:num)']['GET'] = 'api/v1/user/show/$1';
+$route['api/v1/test-login/(:any)']['POST'] = 'api/v1/auth/test_login/$1';
 $route['api/(.*)'] = '404';

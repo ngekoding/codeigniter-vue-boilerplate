@@ -24,12 +24,19 @@ If you loves CodeIgniter 3 & Vue.js, you must try this one to make your life eas
 
 I try to keep this project as simple as possible, so you can making a changes to suit your needs. No need to install a bunch of libraries for making something simple.
 
-### Restful API support: response helper, ajax request validation ✅
+### Restful API support: response helper, ajax request validation ✅ 
 - application/config/routes.php
 - application/core/MY_Controller.php
 - application/controllers/api/*
 
 ### Middlewares
-- Not implemented yet!
+- application/core/MY_Controller.php
+- application/middlewares/*
+- application/helpers/auth_helper.php
+- application/config/config.php
+- application/config/routes.php
+- application/config/autoload.php
+- application/controllers/api/v1/Auth.php
+- application/controllers/api/v1/User.php
 
 Powered by [ngekoding.github.io](https://ngekoding.github.io)

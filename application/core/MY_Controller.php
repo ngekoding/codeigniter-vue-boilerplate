@@ -11,6 +11,20 @@ class MY_Controller extends CI_Controller {
      */
     protected $ajax_request_only = FALSE;
 
+    /**
+     * Middlewares to manage access
+     * 
+     * Formatted as an array that contains these keys:
+     * - name       Middleware name (required)
+     * - behavior   An array of validation behavior. (optional)
+     *              Format: ['type' => except or only, 'methods' => [...]]
+     *              If empty or not defined, will applied to all methods
+     *              except: applied to all methods except the given 
+     *              only: applied only to the given methods
+     * - extras     Extra paramaters to passing to the run method. (optional)
+     */
+    protected $middlewares = [];
+
     public function __construct()
     {
         parent::__construct();
@@ -18,6 +32,7 @@ class MY_Controller extends CI_Controller {
         $this->load->helper('api');
 
         $this->ajax_request_validator();
+        $this->run_middlewares();
     }
 
     /**
@@ -47,5 +62,54 @@ class MY_Controller extends CI_Controller {
         }
 
         if ($error) send_bad_request('Ajax request only!');
+    }
+
+    /**
+     * Run middlewares validation
+     */
+    private function run_middlewares()
+    {
+        foreach ($this->middlewares as $middleware) {
+            $name = $middleware['name'];
+            $behavior = isset($middleware['behavior'])
+                        ? $middleware['behavior'] 
+                        : NULL;
+            $extras = isset($middleware['extras'])
+                        ? $middleware['extras'] 
+                        : [];
+
+            $run = TRUE;
+            if (!empty($behavior)) {
+                $type = $behavior['type'];
+                $methods = $behavior['methods'];
+
+                // Get current requested method
+                $requested_method = $this->router->fetch_method();
+
+                if ($type == 'except' && in_array($requested_method, $methods)) {
+                    $run = FALSE;
+                } elseif ($type == 'only' && !in_array($requested_method, $methods)) {
+                    $run = FALSE;
+                }
+            }
+
+            if ($run) {
+                $class_name = ucfirst(strtolower($name)) . '_middleware'; 
+                $file_name = $class_name . '.php';
+                $file_path = APPPATH . 'middlewares/' . $file_name;
+                if (file_exists($file_path)) {
+                    require $file_path;
+                    $ci =& get_instance();
+                    $obj = new $class_name($ci, $this, $extras);
+                    $obj->run();
+                } else {
+                    if (ENVIRONMENT == 'development') {
+                        throw new Exception('Unable to find middleware: ' . $file_name);
+                    } else {
+                        throw new Exception('Sorry something went wrong.');
+                    }
+                }
+            }
+        }
     }
 }
