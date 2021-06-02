@@ -1,5 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import { baseUrl, siteUrl } from '@/helpers/url';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import { baseUrl, siteUrl } from '@/helpers/url'
 
 import BasicLayout from '@/layouts/BasicLayout.vue'
 
@@ -35,7 +36,11 @@ const routes = [
   },
 ]
 
-export default createRouter({
-  history: createWebHistory(),
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+  mode: 'history',
   routes
 })
+
+export default router

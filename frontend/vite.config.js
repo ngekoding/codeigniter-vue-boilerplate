@@ -1,14 +1,14 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { createVuePlugin } from 'vite-plugin-vue2'
 import liveReload from 'vite-plugin-live-reload'
-const { resolve } = require('path')
+import { resolve } from 'path'
 
 console.log(process.env.APP_ENV);
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    createVuePlugin(),
 
     // As the app is SPA
     // We only needs to listen the changes on index.vue.php file for reloading
@@ -50,7 +50,7 @@ export default defineConfig({
   // https://v3.vuejs.org/guide/installation.html#with-a-bundler
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.esm-bundler.js',
+      vue: 'vue/dist/vue.esm.js',
       '@': resolve(__dirname, './src')
     }
   }

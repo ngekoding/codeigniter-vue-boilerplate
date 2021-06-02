@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
 import { baseUrl, siteUrl } from './helpers/url'
 import router from './router'
@@ -6,12 +6,11 @@ import store from './store'
 
 import '@/styles/main.sass'
 
-const app = createApp(App)
+Vue.prototype.$baseUrl = baseUrl
+Vue.prototype.$siteUrl = siteUrl
 
-app.config.globalProperties.$baseUrl = baseUrl
-app.config.globalProperties.$siteUrl = siteUrl
-
-app.use(router)
-app.use(store)
-
-app.mount('#app')
+new Vue({
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')

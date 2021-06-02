@@ -1,6 +1,8 @@
-# CodeIgniter 3 + Vue.js 3 + Vite
+# CodeIgniter 3 + Vue.js 2 + Vite
 
-Just a basic example how to integrating CodeIgniter 3 + Vue.js 3 + Vite with supported Hot Module Replacement (HMR).
+## This branch for Vue 2, please check branch master for Vue 3
+
+Just a basic example how to integrating CodeIgniter 3 + Vue.js 2 + Vite with supported Hot Module Replacement (HMR).
 
 If you loves CodeIgniter 3 & Vue.js, you must try this one to make your life easier!
 
