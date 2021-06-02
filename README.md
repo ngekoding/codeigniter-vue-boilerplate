@@ -1,5 +1,7 @@
 # CodeIgniter 3 + Vue.js 3 + Vite
 
+## Looking for Vue 2? Please check branch [vue2](https://github.com/ngekoding/codeigniter-vue-boilerplate/tree/vue2)
+
 Just a basic example how to integrating CodeIgniter 3 + Vue.js 3 + Vite with supported Hot Module Replacement (HMR).
 
 If you loves CodeIgniter 3 & Vue.js, you must try this one to make your life easier!
