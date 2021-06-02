@@ -19,7 +19,7 @@ If you loves CodeIgniter 3 & Vue.js, you must try this one to make your life eas
 3. Install vue project dependencies: ```npm install```
 4. Run for development: ```npm run dev```
 5. Run for production: ```npm run build```
-6. Open the browser and go to the project address, e.g. ```http://localhost/codeigniter3-vuejs3-vite-boilerplate/```
+6. Open the browser and go to the project address, e.g. ```http://localhost/codeigniter-vue-boilerplate/```
 7. Enjoy!
 
 ## Features / ideas
@@ -30,7 +30,7 @@ I try to keep this project as simple as possible, so you can making a changes to
 - application/config/routes.php
 - application/core/MY_Controller.php
 - application/controllers/api/*
-- Changes: [b5f80ab](https://github.com/ngekoding/codeigniter3-vuejs3-vite-boilerplate/commit/b5f80ab8261ce2e871951a5979b71eab38a903fd) & [88fbda2](https://github.com/ngekoding/codeigniter3-vuejs3-vite-boilerplate/commit/88fbda2d5500056c6ae2985a42013baca609702b)
+- Changes: [b5f80ab](https://github.com/ngekoding/codeigniter-vue-boilerplate/commit/b5f80ab8261ce2e871951a5979b71eab38a903fd) & [88fbda2](https://github.com/ngekoding/codeigniter-vue-boilerplate/commit/88fbda2d5500056c6ae2985a42013baca609702b)
 
 ### Middlewares ✅
 - application/core/MY_Controller.php
@@ -41,6 +41,6 @@ I try to keep this project as simple as possible, so you can making a changes to
 - application/config/autoload.php
 - application/controllers/api/v1/Auth.php
 - application/controllers/api/v1/User.php
-- Changes: [03c8145](https://github.com/ngekoding/codeigniter3-vuejs3-vite-boilerplate/commit/03c814542611424efd70407f6b4e2e023500cdc4)
+- Changes: [03c8145](https://github.com/ngekoding/codeigniter-vue-boilerplate/commit/03c814542611424efd70407f6b4e2e023500cdc4)
 
 Powered by [ngekoding.github.io](https://ngekoding.github.io)
