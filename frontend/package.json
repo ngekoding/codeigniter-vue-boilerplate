@@ -7,16 +7,15 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "vue": "^2.6.13",
+    "vue": "2.6.13",
     "vue-router": "^3.5.1",
-    "vue-template-compiler": "^2.6.13",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.5",
-    "sass": "^1.32.13",
-    "vite": "^2.3.3",
+    "sass": "1.32.13",
+    "vite": "2.3.4",
     "vite-plugin-live-reload": "^2.1.0",
-    "vite-plugin-vue2": "^1.5.2"
+    "vite-plugin-vue2": "^1.5.2",
+    "vue-template-compiler": "2.6.13"
   }
 }
